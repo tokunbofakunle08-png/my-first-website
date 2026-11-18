@@ -48,7 +48,32 @@ including speaking-based learning games and other interactive products.
     </div>
 
 </div>
+<section class="books-section" id="books">
+    <h2>My Books</h2>
 
+    <div class="featured-books">
+
+        <div class="book-card">
+            <img src="book1.png" alt="Book cover" class="book-cover">
+            <h3>Academic IELTS Writing: Self-Paced Guide</h3>
+            <a href="https://www.tes.com/teaching-resource/resource-13644741" target="_blank">View Book</a>
+        </div>
+
+        <div class="book-card">
+            <img src="book2.png" alt="Book cover" class="book-cover">
+            <h3>IELTS Writing Task 2: Guided Practice Workbook</h3>
+        <a href="https://www.tes.com/teaching-resource/resource-13644808" target="_blank">View Book</a>
+</div>
+
+    </div>
+
+    <div class="more-books">
+        <h3>More Books</h3>
+       <p>📘 <a href="https://www.tes.com/teaching-resource/resource-13626814" target="_blank">ESL Speaking Games | A2–B1 | 65 Cards</a></p>
+
+    <p>📗 <a href="https://www.tes.com/teaching-resource/resource-13624236" target="_blank">ESL Food Vocabulary Pack | Ages 4–8</a></p>
+    </div>
+</section>
 <div class="skills" id="skills">
 
 <div class="feature-cards" id="projects">    
@@ -393,6 +418,47 @@ p {
 }
 html {
     scroll-behavior: smooth;
+}
+.books-section {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.books-section h2 {
+    text-align: center;
+    color: #173D32;
+}
+
+.featured-books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.book-card {
+    text-align: center;
+}
+
+.book-cover {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.book-card a,
+.more-books a {
+    color: #173D32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.more-books {
+    margin-top: 35px;
+    text-align: center;
 }
 @media (max-width: 768px) {
     .navbar {
