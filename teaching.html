@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teaching Experience | Tokunbo Loveth Fakunle</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F8F6F1;
+            color: #173D32;
+        }
+
+        /* TOP NAVIGATION */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 24px 40px;
+        }
+
+        .navbar a {
+            color: #173D32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN PAGE */
+
+        .teaching-page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 40px 80px;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 52px;
+            margin: 0 0 20px;
+        }
+
+        .intro {
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 800px;
+            color: #333333;
+            margin-bottom: 45px;
+        }
+
+        /* HERO SECTION */
+
+        .teaching-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background-color: white;
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        .teaching-hero img {
+            width: 100%;
+            border-radius: 18px;
+            display: block;
+        }
+
+        .teaching-hero h2 {
+            font-size: 34px;
+            margin-top: 0;
+        }
+
+        .teaching-hero p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #444444;
+        }
+
+        /* EXPERIENCE */
+
+        .section-title {
+            font-size: 34px;
+            margin-top: 60px;
+            margin-bottom: 25px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .experience-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        .experience-card h3 {
+            font-size: 23px;
+            margin-top: 0;
+        }
+
+        .experience-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444444;
+        }
+
+        /* IELTS RESULTS */
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .result-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        .result-placeholder {
+            height: 260px;
+            background-color: #EEF3F0;
+            border: 2px dashed #AABDB4;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            color: #52665D;
+        }
+
+        .result-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .result-card p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        /* CLASSROOM GALLERY */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .gallery-placeholder {
+            height: 230px;
+            background-color: #E9E4DA;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            color: #555555;
+            font-weight: bold;
+        }
+
+        /* TEACHING APPROACH */
+
+        .approach {
+            background-color: #173D32;
+            color: white;
+            padding: 45px;
+            border-radius: 24px;
+            margin-top: 60px;
+        }
+
+        .approach h2 {
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        .approach p {
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 850px;
+        }
+
+        .approach ul {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #555555;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .teaching-page {
+                padding: 40px 20px 60px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .teaching-hero {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach {
+                padding: 30px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">← Back to Home</a>
+        <strong>Tokunbo Loveth Fakunle</strong>
+    </nav>
+
+    <main class="teaching-page">
+
+        <p class="eyebrow">MY TEACHING JOURNEY</p>
+
+        <h1>Teaching Experience</h1>
+
+        <p class="intro">
+            I have more than 10 years of experience teaching English to
+            children, teenagers, and adults. My work has included General English,
+            IELTS preparation, speaking classes, online lessons, and academic
+            support for learners at different levels.
+        </p>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="teaching-hero">
+
+            <img src="teaching.png" alt="Teaching English">
+
+            <div>
+                <h2>Helping learners become confident communicators</h2>
+
+                <p>
+                    My teaching focuses on practical communication.
+                    I want students to use English, not simply study rules.
+                </p>
+
+                <p>
+                    Over the years, I have worked with learners from beginner
+                    level to advanced exam preparation and have supported students
+                    preparing for IELTS and other academic goals.
+                </p>
+
+                <p>
+                    I also create speaking activities, lesson materials,
+                    vocabulary resources, writing exercises, and digital
+                    learning tools.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- WHAT I TEACH -->
+
+        <h2 class="section-title">What I Teach</h2>
+
+        <div class="experience-grid">
+
+            <div class="experience-card">
+                <h3>IELTS Preparation</h3>
+
+                <p>
+                    Preparation for IELTS Speaking, Writing, Reading,
+                    and Listening, including exam strategies,
+                    vocabulary development, writing structure,
+                    and speaking practice.
+                </p>
+            </div>
+
+
+            <div class="experience-card">
+                <h3>General English</h3>
+
+                <p>
+                    English lessons for children, teenagers, and adults,
+                    with a focus on vocabulary, grammar, listening,
+                    pronunciation, and everyday communication.
+                </p>
+            </div>
+
+
+            <div class="experience-card">
+                <h3>Speaking & Confidence</h3>
+
+                <p>
+                    Conversation-focused lessons designed to help learners
+                    speak more naturally, express their ideas clearly,
+                    and become more confident using English.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- IELTS RESULTS -->
+
+        <h2 class="section-title">Student IELTS Results</h2>
+
+        <p class="intro">
+            A selection of results from students I have supported.
+            Personal information is hidden to protect student privacy.
+        </p>
+
+<h2 class="section-title">Student IELTS Results</h2>
+
+<p class="intro">
+    A selection of results from students I have supported.
+    Personal identifying information has been hidden for privacy.
+</p>
+
+<div class="results-grid">
+
+    <div class="result-card">
+
+        <img
+            src="ielts-result-1.png"
+            alt="IELTS Student Result"
+            style="width: 100%; border-radius: 15px;"
+        >
+
+        <h3>IELTS Student Result</h3>
+
+        <p>
+            A real IELTS result from one of my students.
+            Personal information has been hidden to protect the student's privacy.
+        </p>
+       </div>
+
+    <div class="result-card">
+
+        <img
+            src="ielts-result-2.png"
+            alt="IELTS Student Result"
+            style="width: 100%; border-radius: 15px;"
+        >
+
+        <h3>IELTS Student Result</h3>
+
+        <p>
+            Another student result showing progress through structured IELTS preparation,
+            speaking practice, writing support, and exam strategy.
+        </p>
+
+    </div>
+
+</div>
+      
+
+
+
+  
+
+                <p>
+                    Another example of progress achieved through
+                    structured preparation and regular practice.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLASSROOM -->
+
+        <h2 class="section-title">Inside My Classroom</h2>
+
+        <p class="intro">
+            A look at my classroom, online lessons, speaking activities,
+            and the learning environment I create for my students.
+        </p>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-placeholder">
+                CLASSROOM PHOTO<br><br>
+                Add your classroom photo here.
+            </div>
+
+            <div class="gallery-placeholder">
+                ONLINE CLASS PHOTO<br><br>
+                Add a screenshot from an online lesson here.
+            </div>
+
+            <div class="gallery-placeholder">
+                STUDENT ACTIVITY<br><br>
+                Add a speaking activity or teaching photo here.
+            </div>
+
+        </div>
+
+
+        <!-- TEACHING APPROACH -->
+
+        <section class="approach">
+
+            <h2>My Teaching Approach</h2>
+
+            <p>
+                I believe language should be used from the beginning.
+                My lessons combine structure with real communication
+                so students can gradually become independent and confident speakers.
+            </p>
+
+            <ul>
+                <li>Speaking from the first lesson</li>
+                <li>Practical vocabulary and grammar</li>
+                <li>Regular speaking practice</li>
+                <li>Clear feedback and correction</li>
+                <li>Exam strategies for IELTS students</li>
+                <li>Lessons adapted to each learner's level and goals</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2026 Tokunbo Loveth Fakunle. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

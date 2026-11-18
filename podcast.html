@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Podcast | Tokunbo Loveth Fakunle</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F8F6F1;
+            color: #173D32;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 24px 40px;
+        }
+
+        .navbar a {
+            color: #173D32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .podcast-page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 40px 80px;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 52px;
+            margin: 0 0 20px;
+        }
+
+        .intro {
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 760px;
+            color: #333333;
+            margin-bottom: 50px;
+        }
+
+        .podcast-hero {
+            background-color: #173D32;
+            color: white;
+            border-radius: 24px;
+            padding: 50px;
+            margin-bottom: 40px;
+        }
+
+        .podcast-hero h2 {
+            font-size: 36px;
+            margin-top: 0;
+        }
+
+        .podcast-hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
+        .podcast-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 24px;
+            background-color: white;
+            color: #173D32;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .podcast-button:hover {
+            opacity: 0.9;
+        }
+
+        .episodes-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .episode-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .episode-card h3 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .episode-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444444;
+        }
+
+        .episode-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #173D32;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .episode-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .podcast-page {
+                padding: 40px 20px 60px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .podcast-hero {
+                padding: 30px 24px;
+            }
+
+            .episodes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">← Back to Home</a>
+        <strong>Tokunbo Loveth Fakunle</strong>
+    </nav>
+
+    <main class="podcast-page">
+
+        <p class="eyebrow">MY PODCAST</p>
+
+        <h1>I Had a Question</h1>
+
+        <p class="intro">
+            Conversations about life, learning, relationships, culture,
+            technology, personal growth, and the experiences of everyday people.
+        </p>
+
+        <section class="podcast-hero">
+            <h2>Curious conversations with real people</h2>
+
+            <p>
+                I use my podcast to ask questions, hear different perspectives,
+                and explore the stories and experiences that shape how people
+                see the world.
+            </p>
+
+            <a class="podcast-button" href="#" target="_blank">
+                Visit My YouTube Channel
+            </a>
+        </section>
+
+        <h2 class="episodes-title">Featured Conversations</h2>
+
+        <div class="episodes-grid">
+
+            <div class="episode-card">
+                <h3>Friendship</h3>
+
+                <p>
+                    A conversation about standards, reciprocity, jealousy,
+                    communication, and what makes a friendship healthy.
+                </p>
+
+                <a class="episode-link" href="#">
+                    Watch Episode →
+                </a>
+            </div>
+
+            <div class="episode-card">
+                <h3>Life Between Cultures</h3>
+
+                <p>
+                    Conversations with people who have lived across countries,
+                    cultures, and different ways of life.
+                </p>
+
+                <a class="episode-link" href="#">
+                    Watch Episode →
+                </a>
+            </div>
+
+            <div class="episode-card">
+                <h3>Everyday People</h3>
+
+                <p>
+                    Stories from ordinary people with interesting experiences,
+                    ideas, careers, and perspectives worth hearing.
+                </p>
+
+                <a class="episode-link" href="#">
+                    Coming Soon →
+                </a>
+            </div>
+
+            <div class="episode-card">
+                <h3>Technology & Life</h3>
+
+                <p>
+                    Exploring how technology, AI, work, education,
+                    and digital life are changing the way we live.
+                </p>
+
+                <a class="episode-link" href="#">
+                    Coming Soon →
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Tokunbo Loveth Fakunle. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

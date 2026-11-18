@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Tokunbo Loveth Fakunle</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F8F6F1;
+            color: #173D32;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 24px 40px;
+        }
+
+        .navbar a {
+            color: #173D32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .projects-page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 40px 80px;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 52px;
+            margin: 0 0 20px;
+        }
+
+        .intro {
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 760px;
+            color: #333333;
+            margin-bottom: 50px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-content h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #173D32;
+        }
+
+        .project-content p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #444444;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .project-tags span {
+            background-color: #EEF3F0;
+            border: 1px solid #D6E1DB;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #173D32;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .projects-grid .project-card:last-child {
+            grid-column: 1 / -1;
+            max-width: 560px;
+            width: 100%;
+            justify-self: center;
+        }
+
+        .coming-soon {
+            margin-top: 50px;
+            padding: 35px;
+            background-color: #173D32;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .coming-soon h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        .coming-soon p {
+            font-size: 17px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .projects-page {
+                padding: 40px 20px 60px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card img {
+                height: 220px;
+            }
+
+            .projects-grid .project-card:last-child {
+                grid-column: auto;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">← Back to Home</a>
+        <strong>Tokunbo Loveth Fakunle</strong>
+    </nav>
+
+    <main class="projects-page">
+
+        <p class="eyebrow">MY WORK</p>
+
+        <h1>Projects</h1>
+
+        <p class="intro">
+            This is where I share the websites, digital tools, games,
+            and learning projects I am building as I grow my skills in technology.
+            My goal is to combine creativity, education, communication,
+            and software development.
+        </p>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img
+                    src="portfolio-project.png"
+                    alt="My First Portfolio Website"
+                >
+
+                <div class="project-content">
+                    <h2>My First Portfolio Website</h2>
+
+                    <p>
+                        My first personal portfolio website, built using HTML and CSS.
+                        I created it to introduce myself, showcase my skills,
+                        present my work, and connect my education and technology journey
+                        in one place.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Responsive Design</span>
+                    </div>
+
+                    <a class="project-link" href="index.html">
+                        View Website →
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img
+                    src="educational-game.png"
+                    alt="Educational Game Project"
+                >
+
+                <div class="project-content">
+                    <h2>Educational Game Project</h2>
+
+                    <p>
+                        I am learning how to build interactive games and learning tools.
+                        My long-term goal is to create speaking-based and educational games
+                        that help learners practise English in a more engaging way.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Game Design</span>
+                        <span>Education</span>
+                        <span>Programming</span>
+                    </div>
+
+                    <a class="project-link" href="#">
+                        Project in Progress →
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img
+                    src="english-learning-tools.png"
+                    alt="English Learning Tools"
+                >
+
+                <div class="project-content">
+                    <h2>English Learning Tools</h2>
+
+                    <p>
+                        I am developing ideas for digital resources that support
+                        English learners with speaking, vocabulary, grammar,
+                        IELTS preparation, listening, and confidence-building.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>English Education</span>
+                        <span>IELTS</span>
+                        <span>Digital Learning</span>
+                    </div>
+
+                    <a class="project-link" href="#">
+                        More Coming Soon →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="coming-soon">
+            <h2>More Projects Coming</h2>
+
+            <p>
+                I am currently learning web development, programming, AI tools,
+                and digital product development. As I build new projects,
+                I will continue adding them here.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Tokunbo Loveth Fakunle. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
