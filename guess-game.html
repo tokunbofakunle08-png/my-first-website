@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Word</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f6f1;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .game-box {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #173D32;
+        }
+
+        #clue {
+            font-size: 22px;
+            margin: 30px 0;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 18px;
+            width: 70%;
+            max-width: 300px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 8px;
+            background-color: #173D32;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #score {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="game-box">
+
+        <h1>Guess the Word</h1>
+
+        <p id="clue"></p>
+
+        <input
+            type="text"
+            id="answer"
+            placeholder="Type your answer"
+        >
+
+        <br>
+
+        <button id="checkButton" onclick="checkAnswer()">Check Answer</button>
+
+        <button id="nextButton" onclick="nextQuestion()">Next Word</button>
+
+        <button id="tryAgainButton" onclick="tryAgain()" style="display:none;">
+               Try Again
+        </button>
+
+        <button id="restartButton" onclick="restartGame()" style="display:none;">
+               Play Again
+        </button>
+        <p id="message"></p>
+
+        <p id="score">
+            Score: 0 / 10
+        </p>
+
+    </div>
+<script>
+const questions = [
+    {
+        clue: "I am yellow. I am a fruit. Monkeys like me.",
+        answer: "banana"
+    },
+    {
+        clue: "I am a small animal. I say meow.",
+        answer: "cat"
+    },
+    {
+        clue: "Students go here to learn.",
+        answer: "school"
+    },
+    {
+        clue: "I help sick people in a hospital.",
+        answer: "doctor"
+    },
+    {
+        clue: "I am a large vehicle. Many people travel in me.",
+        answer: "bus"
+    },
+    {
+        clue: "I am a red or green fruit. I grow on trees.",
+        answer: "apple"
+    },
+    {
+        clue: "You sit on me.",
+        answer: "chair"
+    },
+    {
+        clue: "I fall from the sky. You may need an umbrella.",
+        answer: "rain"
+    },
+    {
+        clue: "You read me. I have pages.",
+        answer: "book"
+    },
+    {
+        clue: "I work in a classroom and help students learn.",
+        answer: "teacher"
+    }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+function showQuestion() {
+    document.getElementById("clue").textContent =
+        questions[currentQuestion].clue;
+
+    document.getElementById("answer").value = "";
+    document.getElementById("message").textContent = "";
+
+    document.getElementById("checkButton").style.display = "inline-block";
+    document.getElementById("nextButton").style.display = "none";
+    document.getElementById("tryAgainButton").style.display = "none";
+    document.getElementById("restartButton").style.display = "none";
+
+    answered = false;
+
+    document.getElementById("answer").focus();
+}
+
+function checkAnswer() {
+    let answerBox = document.getElementById("answer");
+
+    let userAnswer =
+        answerBox.value.trim().toLowerCase();
+
+    let correctAnswer =
+        questions[currentQuestion].answer.toLowerCase();
+
+    if (userAnswer === correctAnswer) {
+
+        document.getElementById("message").textContent =
+            "Correct! 🎉";
+
+        score++;
+
+        document.getElementById("score").textContent =
+            "Score: " + score + " / 10";
+
+        answered = true;
+
+        document.getElementById("checkButton").style.display = "none";
+        document.getElementById("nextButton").style.display = "inline-block";
+
+    } else {
+
+        document.getElementById("message").textContent =
+            "Wrong answer.";
+
+        document.getElementById("checkButton").style.display = "none";
+        document.getElementById("nextButton").style.display = "none";
+        document.getElementById("tryAgainButton").style.display = "inline-block";
+    }
+}
+
+function tryAgain() {
+    let answerBox = document.getElementById("answer");
+
+    answerBox.value = "";
+    answerBox.focus();
+
+    document.getElementById("message").textContent = "";
+
+    document.getElementById("tryAgainButton").style.display = "none";
+    document.getElementById("checkButton").style.display = "inline-block";
+}
+
+function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+        showQuestion();
+
+    } else {
+
+        document.getElementById("clue").textContent =
+            "Game finished!";
+
+        document.getElementById("message").textContent =
+            "Your final score is " + score + " out of 10 🎉";
+
+        document.getElementById("answer").style.display = "none";
+
+        document.getElementById("checkButton").style.display = "none";
+        document.getElementById("nextButton").style.display = "none";
+        document.getElementById("tryAgainButton").style.display = "none";
+
+        document.getElementById("restartButton").style.display = "inline-block";
+    }
+}
+
+function restartGame() {
+    currentQuestion = 0;
+    score = 0;
+
+    document.getElementById("score"/Users/tokunbolovethfakunle/Desktop/MyFirstWebsite/guess-game.html).textContent =
+        "Score: 0 / 10";
+
+    document.getElementById("answer").style.display = "inline-block";
+
+    showQuestion();
+}
+
+showQuestion();
+</script>
+
+</body>
+</html>
