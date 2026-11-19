@@ -127,10 +127,19 @@ including speaking-based learning games and other interactive products.
         and having interesting conversations.
     </p>
 
-    <a class="whatsapp-button" href="https://wa.me/77782760865">
-        Get in Touch
-    </a>
+   <div class="social-links">
+    <a class="whatsapp-button" href="https://wa.me/77782760865" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp" class="social-icon">
+    Get in Touch
+</a>
+
+    <a class="instagram-link" href="https://www.instagram.com/go_english_arena/" target="_blank">
+    <img src="instagram.png" alt="Instagram" class="social-icon">
+    Go English Arena
+</a>
 </div>
+</div>
+
 <footer class="footer">
     <p>© 2026 Tokunbo Loveth Fakunle. All rights reserved.</p>
 </footer>
@@ -241,10 +250,12 @@ including speaking-based learning games and other interactive products.
     background-color: transparent;
 }
 .whatsapp-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     background-color: #F8F6F1;
     color: #173D32;
-    padding: 12px 25px;
+    padding: 12px 22px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
@@ -273,7 +284,9 @@ including speaking-based learning games and other interactive products.
 .contact p {
     color: #F8F6F1;
 }
-
+.contact a {
+    color: #E6D9FF;
+}
 body {
     background-color: #F8F6F1;
     background-image: url("background.png");
@@ -461,24 +474,39 @@ html {
     text-align: center;
 }
 @media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        margin: 0;
+    }
+
     .navbar {
-        padding: 15px 20px;
         flex-direction: column;
+        padding: 15px 10px;
         gap: 15px;
-        position: static;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 20px;
     }
 
     .nav-links {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
     }
-    .hero-text h1 {
-    font-size: 42px;
-}
+
+    .nav-links a {
+        margin: 0;
+        font-size: 14px;
+    }
 
     .hero {
         flex-direction: column;
-        padding: 30px 20px;
+        padding: 30px 15px;
+        gap: 20px;
         text-align: center;
     }
 
@@ -486,21 +514,102 @@ html {
         max-width: 100%;
     }
 
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text h3 {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .hero-photo {
         width: 300px;
+        height: auto;
         transform: none;
-        margin-top: 20px;
+        margin: 10px auto 0;
     }
 
     .feature-cards {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .featured-books {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .book-cover {
+        width: 200px;
+        height: auto;
     }
 
     .skills ul {
         grid-template-columns: 1fr;
     }
+
+    .books-section,
+    .skills,
+    .contact {
+        padding: 20px;
+    }
+
+    .contact {
+        margin-top: 30px;
+    }
+
+    .footer {
+        padding: 15px 10px;
+    }
+}
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #F8D9E8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.instagram-link:hover {
+    color: #FFDFF0;
+}
+
+.instagram-logo {
+    width: 22px;
+    height: 22px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+.social-links img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.instagram-logo,
+.social-icon {
+    width: 28px !important;
+    height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    object-fit: contain;
 }
 </style>
+
 <script>
 const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -513,4 +622,5 @@ navLinks.forEach(link => {
         this.classList.add("active");
     });
 });
+
 </script>
